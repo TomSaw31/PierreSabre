@@ -13,9 +13,9 @@ public class Humain {
 		return argent;
 	}
 
-	public Humain(String nom, String boisson_favorite, int argent) {
+	public Humain(String nom, String boissonFavorite, int argent) {
 		this.nom = nom;
-		this.boissonFavorite = boisson_favorite;
+		this.boissonFavorite = boissonFavorite;
 		this.argent = argent;
 	}
 
