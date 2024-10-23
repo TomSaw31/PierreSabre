@@ -4,7 +4,10 @@ import personnages.Commercant;
 import personnages.Humain;
 import personnages.Ronin;
 import personnages.Yakuza;
-
+/**
+ * Cette classe est utilisee pour representer differentes histoires du TP4 afin de tester les
+ * autres classes du projet
+ */
 public class HistoireTP4 {
 	public static void main(String[] args) {
 		// Tests classe Humain
