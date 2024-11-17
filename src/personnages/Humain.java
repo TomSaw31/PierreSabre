@@ -80,21 +80,24 @@ public class Humain {
 	}
 
 	public void listerConnaissances() {
-		System.out.print("(" + getNom() + ") - Je connais beaucoup de monde dont : ");
 		boolean debut = true;
+		StringBuilder chaine = new StringBuilder();
 		for (Humain humain : memoire) {
 			if (humain != null) {
 				if(debut) {
-					System.out.print(humain.getNom());
+					chaine.append(humain.getNom());
 					debut = false;
 				} else {
-					System.out.print(", " + humain.getNom());
+					chaine.append(", " + humain.getNom());
 				}
 			} else {
 				break;
 			}
 		}
-		System.out.println("");
-
+		if (chaine.length() != 0) {
+			parler("Je connais beaucoup de monde dont : " + chaine);
+		} else {
+			parler("Je ne connais personne");
+		}
 	}
 }
