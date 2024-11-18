@@ -1,7 +1,7 @@
 package personnages;
 
 public class Humain {
-	public static final int TAILLE_MEMOIRE = 30;
+	protected static final int TAILLE_MEMOIRE = 30;
 
 	private String nom;
 	private String boissonFavorite;
@@ -64,7 +64,7 @@ public class Humain {
 
 	private void memoriser(Humain humain) {
 		if (nbConnaissances == TAILLE_MEMOIRE) {
-			for(int i = 0; i < memoire.length - 1; i++) {
+			for (int i = 0; i < memoire.length - 1; i++) {
 				memoire[i] = memoire[i + 1];
 			}
 			memoire[nbConnaissances - 1] = humain;
@@ -80,18 +80,11 @@ public class Humain {
 	}
 
 	public void listerConnaissances() {
-		boolean debut = true;
 		StringBuilder chaine = new StringBuilder();
-		for (Humain humain : memoire) {
-			if (humain != null) {
-				if(debut) {
-					chaine.append(humain.getNom());
-					debut = false;
-				} else {
-					chaine.append(", " + humain.getNom());
-				}
-			} else {
-				break;
+		for (int i = 0; i < nbConnaissances; i++) {
+			chaine.append(memoire[i].getNom());
+			if(i != nbConnaissances - 1) {
+				chaine.append(", ");
 			}
 		}
 		if (chaine.length() != 0) {
