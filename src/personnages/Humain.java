@@ -41,12 +41,12 @@ public class Humain {
 
 	public String acheter(String bien, int prix) {
 		if (getArgent() >= prix) {
-			parler("J'ai " + getArgent() + " sous en poche. Je vais pouvoir m'offrir " + bien + " à " + prix
+			parler("J'ai " + getArgent() + " sous en poche. Je vais pouvoir m'offrir " + bien + " ï¿½ " + prix
 					+ " sous.");
 			perdreArgent(prix);
 			return bien;
 		} else {
-			parler("Je n'ai plus que " + getArgent() + " sous en poche. Je ne peux meme pas m'offrir " + bien + " à "
+			parler("Je n'ai plus que " + getArgent() + " sous en poche. Je ne peux meme pas m'offrir " + bien + " ï¿½ "
 					+ prix + " sous.");
 			return null;
 		}
@@ -97,7 +97,7 @@ public class Humain {
 		if (chaine.length() != 0) {
 			parler("Je connais beaucoup de monde dont : " + chaine);
 		} else {
-			parler("Je ne connais personne");
+			parler("Je ne peux faire ami ami avec personne car je ne connais personne ! Snif.");
 		}
 	}
 }
